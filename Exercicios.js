@@ -54,3 +54,21 @@ function precosIva(array, parametro){
 }
 
 console.log(precosIva(inventario, "preco"));
+
+console.log("-----------EX.05---------------");
+
+// const calculoPreco = inventario.reduce((total, produto) => {
+//   return total + produto.preco;
+// }, 0);
+
+// console.log(calculoPreco);
+
+function calculoPreco(array, parametro1, parametro2) {
+  return array.reduce((total, produto) => {
+    if (parametro2) {
+      return total + (produto[parametro2] ? produto[parametro1] : 0);
+    }
+
+  }, 0);
+}
+console.log(calculoPreco(inventario, "preco", "emStock"));
