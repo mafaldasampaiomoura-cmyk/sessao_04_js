@@ -31,4 +31,16 @@ function filtroStockPreco (array, parametro1, parametro2){
 }
 console.log(filtroStockPreco(inventario, "emStock", "preco"));
 
+console.log("-----------EX.03---------------");
+
+// const semStock = inventario.some(stock => stock.emStock === false); 
+// console.log(semStock);
+
+function semStock (array, parametro1){
+    if (array.some(stock => stock[parametro1] === false)){
+        return array.filter(stock => stock[parametro1] === false )
+    }
+};
+
+console.log(semStock(inventario, "emStock"));
 
