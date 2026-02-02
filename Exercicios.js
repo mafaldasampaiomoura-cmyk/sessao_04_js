@@ -41,6 +41,16 @@ function semStock (array, parametro1){
         return array.filter(stock => stock[parametro1] === false )
     }
 };
-
 console.log(semStock(inventario, "emStock"));
 
+console.log("-----------EX.04---------------");
+
+// const precosIva = inventario.map(iva => iva.preco + (iva.preco * 0.23))
+
+// console.log(precosIva);
+
+function precosIva(array, parametro){
+    return array.map(iva => iva[parametro] + (iva[parametro] * 0.23));
+}
+
+console.log(precosIva(inventario, "preco"));
