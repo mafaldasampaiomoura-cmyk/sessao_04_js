@@ -20,3 +20,15 @@ function comStock (array, parametro){
 
 console.log(comStock(inventario, "emStock"));
 
+
+console.log("----------EX.02-------------"); 
+
+// const filtroStockPreco = inventario.filter(produto => produto.emStock && produto.preco < 100); 
+// console.log(filtroStockPreco)
+
+function filtroStockPreco (array, parametro1, parametro2){
+    return array.filter(produto => produto[parametro1] && produto[parametro2] < 100);
+}
+console.log(filtroStockPreco(inventario, "emStock", "preco"));
+
+
